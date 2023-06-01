@@ -24,7 +24,7 @@ public class VueloController {
 	}
 	
 	@PutMapping(value="vuelos/{idvuelo}/{preservadas}")
-	public Vuelo actualizarPlazas(@PathVariable int idvuelo, @PathVariable int preservadas){
-		return service.actualizarVuelo(idvuelo, preservadas);
+	public void actualizarPlazas(@PathVariable int idvuelo, @PathVariable int preservadas){
+		service.actualizarVuelo(idvuelo, preservadas);
 	}
 }

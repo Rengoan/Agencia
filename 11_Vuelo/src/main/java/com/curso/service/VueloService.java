@@ -7,5 +7,5 @@ import com.curso.modelo.Vuelo;
 public interface VueloService {
 
 	List<Vuelo> disponibles(int plazas);
-	Vuelo actualizarVuelo(int idVuelo, int pReservadas);
+	void actualizarVuelo(int idVuelo, int pReservadas);
 }

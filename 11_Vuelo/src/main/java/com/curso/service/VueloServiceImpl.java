@@ -32,7 +32,7 @@ public class VueloServiceImpl implements VueloService {
 	}
 
 	@Override
-	public Vuelo actualizarVuelo(int idVuelo, int pReservadas) {
+	public void actualizarVuelo(int idVuelo, int pReservadas) {
 		Optional<Vuelo> optionalVuelo = dao.findById(idVuelo);
 		if (optionalVuelo.isPresent()) {
 			Vuelo vuelo = optionalVuelo.get();
@@ -41,7 +41,6 @@ public class VueloServiceImpl implements VueloService {
 			if (plazasDisponibles >= pReservadas) {
 				vuelo.setPdisponibles(plazasDisponibles - pReservadas);
 				dao.save(vuelo);
-				return vuelo;
 			} else {
 				// No hay suficientes plazas disponibles para reservar
 				throw new RuntimeException("No hay suficientes plazas disponibles para realizar la reserva.");

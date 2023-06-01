@@ -1,10 +1,18 @@
 package com.curso.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "reserva")
 public class Reserva {
 
+	@Id
 	private int idreserva;
 	private String nombrecliente;
 	private String dni;
+	private int personasreserva;
 	private int idhotel;
 	private int idvuelo;
 
@@ -12,14 +20,16 @@ public class Reserva {
 	 * @param idreserva
 	 * @param nombrecliente
 	 * @param dni
+	 * @param personasreserva
 	 * @param idhotel
 	 * @param idvuelo
 	 */
-	public Reserva(int idreserva, String nombrecliente, String dni, int idhotel, int idvuelo) {
+	public Reserva(int idreserva, String nombrecliente, String dni, int personasreserva, int idhotel, int idvuelo) {
 		super();
 		this.idreserva = idreserva;
 		this.nombrecliente = nombrecliente;
 		this.dni = dni;
+		this.personasreserva = personasreserva;
 		this.idhotel = idhotel;
 		this.idvuelo = idvuelo;
 	}
@@ -71,6 +81,20 @@ public class Reserva {
 	 */
 	public void setDni(String dni) {
 		this.dni = dni;
+	}
+
+	/**
+	 * @return the personasreserva
+	 */
+	public int getPersonasreserva() {
+		return personasreserva;
+	}
+
+	/**
+	 * @param personasreserva the personasreserva to set
+	 */
+	public void setPersonasreserva(int personasreserva) {
+		this.personasreserva = personasreserva;
 	}
 
 	/**

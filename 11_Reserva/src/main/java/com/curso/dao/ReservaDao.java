@@ -1,4 +1,4 @@
-package com.curso.dao;
+ package com.curso.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

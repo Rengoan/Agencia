@@ -23,7 +23,7 @@ public class HotelController {
 	}
 	
 	@GetMapping(value="hoteles/{nombre}",produces=MediaType.APPLICATION_JSON_VALUE)
-	public Hotel nombreHotel(@PathVariable String nombre){
+	public String nombreHotel(@PathVariable String nombre){
 		return service.buscarNombre(nombre);
 	}
 }

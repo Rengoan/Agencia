@@ -20,10 +20,10 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Hotel buscarNombre(String nombre) {
+	public String buscarNombre(String nombre) {
 		Hotel hotel = dao.findByName(nombre);
 		
-		return hotel;
+		return hotel!=null?hotel.getNombre():null;
 	}
 
 }
