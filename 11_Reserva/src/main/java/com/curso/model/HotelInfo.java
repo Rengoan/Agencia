@@ -1,104 +1,128 @@
 package com.curso.model;
 
+/**
+ * @author sinensia Juan Luis
+ * Clase que representa la información de un hotel.
+ */
 public class HotelInfo {
 
-	private int idhotel;
-	private String nombre;
-	private int categoria;
-	private double precio;
-	private boolean disponible;
+    private int idhotel;
+    private String nombre;
+    private int categoria;
+    private double precio;
+    private boolean disponible;
 
-	/**
-	 * @param idhotel
-	 * @param nombre
-	 * @param categoria
-	 * @param precio
-	 * @param disponible
-	 */
-	public HotelInfo(int idhotel, String nombre, int categoria, double precio, boolean disponible) {
-		super();
-		this.idhotel = idhotel;
-		this.nombre = nombre;
-		this.categoria = categoria;
-		this.precio = precio;
-		this.disponible = disponible;
-	}
+    /**
+     * Constructor de la clase HotelInfo.
+     *
+     * @param idhotel     el ID del hotel
+     * @param nombre      el nombre del hotel
+     * @param categoria   la categoría del hotel
+     * @param precio      el precio del hotel
+     * @param disponible  la disponibilidad del hotel
+     */
+    public HotelInfo(int idhotel, String nombre, int categoria, double precio, boolean disponible) {
+        this.idhotel = idhotel;
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.precio = precio;
+        this.disponible = disponible;
+    }
 
-	/**
-	 * 
-	 */
-	public HotelInfo() {
-		super();
-	}
+    /**
+     * Constructor por defecto de la clase HotelInfo.
+     */
+    public HotelInfo() {
+    }
 
-	/**
-	 * @return the idhotel
-	 */
-	public int getIdhotel() {
-		return idhotel;
-	}
+    /**
+     * Obtiene el ID del hotel.
+     *
+     * @return el ID del hotel
+     */
+    public int getIdhotel() {
+        return idhotel;
+    }
 
-	/**
-	 * @param idhotel the idhotel to set
-	 */
-	public void setIdhotel(int idhotel) {
-		this.idhotel = idhotel;
-	}
+    /**
+     * Establece el ID del hotel.
+     *
+     * @param idhotel el ID del hotel a establecer
+     */
+    public void setIdhotel(int idhotel) {
+        this.idhotel = idhotel;
+    }
 
-	/**
-	 * @return the nombre
-	 */
-	public String getNombre() {
-		return nombre;
-	}
+    /**
+     * Obtiene el nombre del hotel.
+     *
+     * @return el nombre del hotel
+     */
+    public String getNombre() {
+        return nombre;
+    }
 
-	/**
-	 * @param nombre the nombre to set
-	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    /**
+     * Establece el nombre del hotel.
+     *
+     * @param nombre el nombre del hotel a establecer
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	/**
-	 * @return the categoria
-	 */
-	public int getCategoria() {
-		return categoria;
-	}
+    /**
+     * Obtiene la categoría del hotel.
+     *
+     * @return la categoría del hotel
+     */
+    public int getCategoria() {
+        return categoria;
+    }
 
-	/**
-	 * @param categoria the categoria to set
-	 */
-	public void setCategoria(int categoria) {
-		this.categoria = categoria;
-	}
+    /**
+     * Establece la categoría del hotel.
+     *
+     * @param categoria la categoría del hotel a establecer
+     */
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
+    }
 
-	/**
-	 * @return the precio
-	 */
-	public double getPrecio() {
-		return precio;
-	}
+    /**
+     * Obtiene el precio del hotel.
+     *
+     * @return el precio del hotel
+     */
+    public double getPrecio() {
+        return precio;
+    }
 
-	/**
-	 * @param precio the precio to set
-	 */
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
+    /**
+     * Establece el precio del hotel.
+     *
+     * @param precio el precio del hotel a establecer
+     */
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 
-	/**
-	 * @return the disponible
-	 */
-	public boolean isDisponible() {
-		return disponible;
-	}
+    /**
+     * Verifica la disponibilidad del hotel.
+     *
+     * @return true si el hotel está disponible, false de lo contrario
+     */
+    public boolean isDisponible() {
+        return disponible;
+    }
 
-	/**
-	 * @param disponible the disponible to set
-	 */
-	public void setDisponible(boolean disponible) {
-		this.disponible = disponible;
-	}
+    /**
+     * Establece la disponibilidad del hotel.
+     *
+     * @param disponible la disponibilidad del hotel a establecer
+     */
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
 
 }

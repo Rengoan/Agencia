@@ -12,8 +12,9 @@ import com.curso.model.HotelInfo;
 import com.curso.model.Reserva;
 
 /**
- * @author sinensia Juan Luis Implementación de la interfaz ReservaService que
- *         proporciona funcionalidades relacionadas con las reservas.
+ * @author sinensia Juan Luis 
+ * Implementación de la interfaz ReservaService que proporciona funcionalidades relacionadas con las reservas.
+ *         
  */
 @Service
 public class ReservaServiceImpl implements ReservaService {

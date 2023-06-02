@@ -6,108 +6,131 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/**
+ * @author sinensia Juan Luis
+ * Clase que representa un vuelo.
+ */
 @Entity
 @Table(name = "vuelo")
 public class Vuelo {
-	
-	@Id
-	private int idvuelo;
-	private String compania;
-	private Date fechavuelo;
-	private double precio;
-	private int pdisponibles;
 
-	/**
-	 * @param idvuelo
-	 * @param compania
-	 * @param fechavuelo
-	 * @param precio
-	 * @param pdisponibles
-	 */
-	public Vuelo(int idvuelo, String compania, Date fechavuelo, double precio, int pdisponibles) {
-		super();
-		this.idvuelo = idvuelo;
-		this.compania = compania;
-		this.fechavuelo = fechavuelo;
-		this.precio = precio;
-		this.pdisponibles = pdisponibles;
-	}
+    @Id
+    private int idvuelo;
+    private String compania;
+    private Date fechavuelo;
+    private double precio;
+    private int pdisponibles;
 
-	/**
-	 * 
-	 */
-	public Vuelo() {
-		super();
-	}
+    /**
+     * Constructor de la clase Vuelo.
+     *
+     * @param idvuelo      el ID del vuelo
+     * @param compania     la compañía del vuelo
+     * @param fechavuelo   la fecha del vuelo
+     * @param precio       el precio del vuelo
+     * @param pdisponibles el número de asientos disponibles del vuelo
+     */
+    public Vuelo(int idvuelo, String compania, Date fechavuelo, double precio, int pdisponibles) {
+        this.idvuelo = idvuelo;
+        this.compania = compania;
+        this.fechavuelo = fechavuelo;
+        this.precio = precio;
+        this.pdisponibles = pdisponibles;
+    }
 
-	/**
-	 * @return the idvuelo
-	 */
-	public int getIdvuelo() {
-		return idvuelo;
-	}
+    /**
+     * Constructor por defecto de la clase Vuelo.
+     */
+    public Vuelo() {
+    }
 
-	/**
-	 * @param idvuelo the idvuelo to set
-	 */
-	public void setIdvuelo(int idvuelo) {
-		this.idvuelo = idvuelo;
-	}
+    /**
+     * Obtiene el ID del vuelo.
+     *
+     * @return el ID del vuelo
+     */
+    public int getIdvuelo() {
+        return idvuelo;
+    }
 
-	/**
-	 * @return the compania
-	 */
-	public String getCompania() {
-		return compania;
-	}
+    /**
+     * Establece el ID del vuelo.
+     *
+     * @param idvuelo el ID del vuelo a establecer
+     */
+    public void setIdvuelo(int idvuelo) {
+        this.idvuelo = idvuelo;
+    }
 
-	/**
-	 * @param compania the compania to set
-	 */
-	public void setCompania(String compania) {
-		this.compania = compania;
-	}
+    /**
+     * Obtiene la compañía del vuelo.
+     *
+     * @return la compañía del vuelo
+     */
+    public String getCompania() {
+        return compania;
+    }
 
-	/**
-	 * @return the fechavuelo
-	 */
-	public Date getFechavuelo() {
-		return fechavuelo;
-	}
+    /**
+     * Establece la compañía del vuelo.
+     *
+     * @param compania la compañía del vuelo a establecer
+     */
+    public void setCompania(String compania) {
+        this.compania = compania;
+    }
 
-	/**
-	 * @param fechavuelo the fechavuelo to set
-	 */
-	public void setFechavuelo(Date fechavuelo) {
-		this.fechavuelo = fechavuelo;
-	}
+    /**
+     * Obtiene la fecha del vuelo.
+     *
+     * @return la fecha del vuelo
+     */
+    public Date getFechavuelo() {
+        return fechavuelo;
+    }
 
-	/**
-	 * @return the precio
-	 */
-	public double getPrecio() {
-		return precio;
-	}
+    /**
+     * Establece la fecha del vuelo.
+     *
+     * @param fechavuelo la fecha del vuelo a establecer
+     */
+    public void setFechavuelo(Date fechavuelo) {
+        this.fechavuelo = fechavuelo;
+    }
 
-	/**
-	 * @param precio the precio to set
-	 */
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
+    /**
+     * Obtiene el precio del vuelo.
+     *
+     * @return el precio del vuelo
+     */
+    public double getPrecio() {
+        return precio;
+    }
 
-	/**
-	 * @return the pdisponibles
-	 */
-	public int getPdisponibles() {
-		return pdisponibles;
-	}
+    /**
+     * Establece el precio del vuelo.
+     *
+     * @param precio el precio del vuelo a establecer
+     */
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 
-	/**
-	 * @param pdisponibles the pdisponibles to set
-	 */
-	public void setPdisponibles(int pdisponibles) {
-		this.pdisponibles = pdisponibles;
-	}
+    /**
+     * Obtiene el número de asientos disponibles del vuelo.
+     *
+     * @return el número de asientos disponibles del vuelo
+     */
+    public int getPdisponibles() {
+        return pdisponibles;
+    }
 
+    /**
+     * Establece el número de asientos disponibles del vuelo.
+     *
+     * @param pdisponibles el número de asientos disponibles del vuelo a establecer
+     */
+    public void setPdisponibles(int pdisponibles) {
+        this.pdisponibles = pdisponibles;
+    }
 }
