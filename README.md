@@ -2,7 +2,7 @@
 ## Tabla de contenidos
 - [Descripción](#descripción)
 - [Uso](#uso)
-- - [Swagger](#swagger)
+- [Swagger](#swagger)
 
 ### Descripción
 Se trata de 3 proyectos de microservicios realizados con springboot y una base de datos. Estos proyectos interaccionan entre si para ofrecer el servicio de una agencia.
@@ -24,7 +24,7 @@ Comprueba en el archivo properties que los datos de la conexion y base de datos 
 A continuacion arranca los 3 proyectos y haz las comprobaciones utilizando postman y las urls que indico en las clases controller.
 
 ### Swagger
-Vuelo -> http://localhost:8088/swagger-ui.html
-Reserva -> http://localhost:9090/swagger-ui.html
-Hotel -> http://localhost:8500/swagger-ui.html
+- Vuelo -> http://localhost:8088/swagger-ui.html
+- Reserva -> http://localhost:9090/swagger-ui.html
+- Hotel -> http://localhost:8500/swagger-ui.html
 
