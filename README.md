@@ -7,10 +7,11 @@
 Se trata de 3 proyectos de microservicios realizados con springboot y una base de datos. Estos proyectos interaccionan entre si para ofrecer el servicio de una agencia.
 
 ### Uso
-Para poder utilizar estos proyectos en su conjunto debes crearte 3 poyectos Spring Starter project con las siguientes caracteristicas:
+Para poder utilizar estos proyectos en su conjunto debes crearte 3 poyectos Spring Starter de la version 2.7.6(Esta version es necesaria para que funcione Swagger) project con las siguientes caracteristicas:
 - Java 8
 - Maven
 - Dependencias:
+  - Swagger 2.9.2  
   - MySQL Driver
   - Spring Data JPA
   - Spring Web
