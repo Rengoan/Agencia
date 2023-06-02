@@ -35,6 +35,18 @@ public class Reserva {
 	}
 
 	/**
+	 * @param nombrecliente
+	 * @param dni
+	 * @param idvuelo
+	 */
+	public Reserva(String nombrecliente, String dni, int idvuelo) {
+		super();
+		this.nombrecliente = nombrecliente;
+		this.dni = dni;
+		this.idvuelo = idvuelo;
+	}
+
+	/**
 	 * 
 	 */
 	public Reserva() {

@@ -12,8 +12,8 @@ import com.curso.model.HotelInfo;
 import com.curso.model.Reserva;
 
 /**
- * @author sinensia Juan Luis
- * Implementación de la interfaz ReservaService que proporciona funcionalidades relacionadas con las reservas.
+ * @author sinensia Juan Luis Implementación de la interfaz ReservaService que
+ *         proporciona funcionalidades relacionadas con las reservas.
  */
 @Service
 public class ReservaServiceImpl implements ReservaService {
@@ -27,7 +27,8 @@ public class ReservaServiceImpl implements ReservaService {
 	String url2 = "http://localhost:8500/";
 
 	/**
-	 * Registra una nueva reserva y actualiza las plazas disponibles del vuelo correspondiente.
+	 * Registra una nueva reserva y actualiza las plazas disponibles del vuelo
+	 * correspondiente.
 	 *
 	 * @param reserva La reserva a ser registrada.
 	 */
@@ -40,8 +41,10 @@ public class ReservaServiceImpl implements ReservaService {
 	/**
 	 * Obtiene la lista de reservas existentes para un hotel específico.
 	 *
-	 * @param nombrehotel El nombre del hotel para el cual se desea obtener las reservas.
-	 * @return Lista de objetos Reserva que representa las reservas para el hotel especificado.
+	 * @param nombrehotel El nombre del hotel para el cual se desea obtener las
+	 *                    reservas.
+	 * @return Lista de objetos Reserva que representa las reservas para el hotel
+	 *         especificado.
 	 */
 	@Override
 	public List<Reserva> reservas(String nombrehotel) {
@@ -78,7 +81,8 @@ public class ReservaServiceImpl implements ReservaService {
 	 * Obtiene la información del hotel a partir de su nombre.
 	 *
 	 * @param nombre El nombre del hotel del cual se desea obtener la información.
-	 * @return El objeto HotelInfo que contiene la información del hotel correspondiente al nombre especificado.
+	 * @return El objeto HotelInfo que contiene la información del hotel
+	 *         correspondiente al nombre especificado.
 	 */
 	private HotelInfo obtenerNombreHotel(String nombre) {
 		HotelInfo h = restTemplate.getForObject(url2 + "hoteles/{nombre}", HotelInfo.class, nombre);
@@ -86,4 +90,3 @@ public class ReservaServiceImpl implements ReservaService {
 		return h;
 	}
 }
-
