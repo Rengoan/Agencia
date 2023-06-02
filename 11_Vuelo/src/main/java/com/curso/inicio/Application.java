@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 @EntityScan(basePackages = {"com.curso.modelo"})
 @EnableJpaRepositories(basePackages = {"com.curso.dao"})
-@SpringBootApplication(scanBasePackages = { "com.curso.controller", "com.curso.service" })
+@SpringBootApplication(scanBasePackages = { "com.curso.controller", "com.curso.service","com.curso.inicio" })
 public class Application {
 
     /**
