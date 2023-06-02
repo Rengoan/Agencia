@@ -1,6 +1,9 @@
 package com.curso.dao;
 
-
+/**
+ * 
+ * @author sinensia Juan Luis
+ */
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

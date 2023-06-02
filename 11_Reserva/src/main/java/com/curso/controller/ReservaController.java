@@ -13,23 +13,35 @@ import org.springframework.web.bind.annotation.RestController;
 import com.curso.model.Reserva;
 import com.curso.service.ReservaService;
 
+/**
+ * @author sinensia Juan Luis
+ * Controlador que gestiona las peticiones relacionadas con las reservas.
+ */
 @RestController
 public class ReservaController {
 
 	@Autowired
 	ReservaService service;
 
-	//http://localhost:9090/reservas
+	/**
+	 * Crea una nueva reserva.
+	 *
+	 * @param reserva La reserva a ser creada.
+	 */
 	@PostMapping(value = "reservas", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void altaReserva(@RequestBody Reserva reserva) {
 		service.altaReserva(reserva);
 	}
 
-	//http://localhost:9090/reservas/nombrehotel
+	/**
+	 * Obtiene las reservas existentes para un hotel específico.
+	 *
+	 * @param nombrehotel El nombre del hotel para el cual se desea obtener las reservas.
+	 * @return Lista de objetos Reserva que representa las reservas para el hotel especificado.
+	 */
 	@GetMapping(value = "reservas/{nombrehotel}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Reserva> reservaHotel(@PathVariable String nombrehotel) {
-
 		return service.reservas(nombrehotel);
 	}
-
 }
+
