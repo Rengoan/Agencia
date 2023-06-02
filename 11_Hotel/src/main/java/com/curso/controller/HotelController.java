@@ -16,14 +16,16 @@ public class HotelController {
 
 	@Autowired
 	HotelService service;
-	
-	@GetMapping(value="hoteles",produces=MediaType.APPLICATION_JSON_VALUE)
-	public List<Hotel> Hoteles(){
+
+	@GetMapping(value = "hoteles", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Hotel> hoteles() {
 		return service.hoteles();
 	}
-	
-	@GetMapping(value="hoteles/{nombre}",produces=MediaType.APPLICATION_JSON_VALUE)
-	public String nombreHotel(@PathVariable String nombre){
-		return service.buscarNombre(nombre);
+
+	@GetMapping(value = "hoteles/{nombre}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Hotel nombreHotel(@PathVariable String nombre) {
+		Hotel h = new Hotel();
+		h = service.buscarNombre(nombre);
+		return h;
 	}
 }

@@ -7,6 +7,6 @@ import com.curso.model.Hotel;
 public interface HotelService {
 
 	List<Hotel> hoteles();
-	String buscarNombre(String nombre);
+	Hotel buscarNombre(String nombre);
 	
 }
