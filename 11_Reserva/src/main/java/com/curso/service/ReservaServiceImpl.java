@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.curso.dao.ReservaDao;
+import com.curso.exception.HotelNotFoundException;
 import com.curso.model.HotelInfo;
 import com.curso.model.Reserva;
 
@@ -63,6 +64,7 @@ public class ReservaServiceImpl implements ReservaService {
 			}
 		} else {
 			// Manejar caso de hotel no encontrado
+			throw new HotelNotFoundException("Hotel no encontrado: " + nombrehotel);
 		}
 
 		return reservas;
