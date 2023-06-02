@@ -40,7 +40,7 @@ public class VueloController {
 		       @ApiResponse(code = 404, message = "Método no permitido."),
 		       @ApiResponse(code = 500, message = "Error inesperado del sistema")
 		       })
-	@GetMapping(value="vuelos/{plazas}",produces=MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="vuelos/{plazas}",produces=MediaType.APPLICATION_JSON_VALUE)//http://localhost:8088/vuelos/plazas
 	public List<Vuelo> vuelosDisponibles(@ApiParam(value="Numero de plazas que permite devolver los vuelos "
 			+ "disponibles que tengan sufientes asientos")@PathVariable int plazas){
 		return service.disponibles(plazas);
@@ -53,7 +53,7 @@ public class VueloController {
 	 * @param preservadas El número de plazas reservadas.
 	 */
 	@ApiOperation(value="Actualiza la cantidad de plazas disponibles para un vuelo específico.")
-	@PutMapping(value="vuelos/{idvuelo}/{preservadas}")
+	@PutMapping(value="vuelos/{idvuelo}/{preservadas}")//http://localhost:8088/vuelos/idvuelo/preservadas
 	public void actualizarPlazas(@ApiParam(value="id del vuelo a actualizar")@PathVariable int idvuelo,
 			@ApiParam(value="Plazas que van a ser reservadas")@PathVariable int preservadas){
 		service.actualizarVuelo(idvuelo, preservadas);

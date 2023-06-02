@@ -40,7 +40,7 @@ public class ReservaController {
 		       @ApiResponse(code = 404, message = "Método no permitido."),
 		       @ApiResponse(code = 500, message = "Error inesperado del sistema")
 		       })
-	@PostMapping(value = "reservas", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "reservas", consumes = MediaType.APPLICATION_JSON_VALUE)//http://localhost:9090/reservas
 	public void altaReserva(@RequestBody Reserva reserva) {
 		service.altaReserva(reserva);
 	}
@@ -52,7 +52,7 @@ public class ReservaController {
 	 * @return Lista de objetos Reserva que representa las reservas para el hotel especificado.
 	 */
 	@ApiOperation(value="Obtiene las reservas existentes para un hotel especifico")
-	@GetMapping(value = "reservas/{nombrehotel}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "reservas/{nombrehotel}", produces = MediaType.APPLICATION_JSON_VALUE)//http://localhost:9090/reservas/nombrehotel
 	public List<Reserva> reservaHotel(@ApiParam(value="Nombre del hotel a buscar")@PathVariable String nombrehotel) {
 		return service.reservas(nombrehotel);
 	}
