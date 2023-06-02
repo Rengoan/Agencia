@@ -41,7 +41,7 @@ public class ReservaServiceImpl implements ReservaService {
 	}
 
 	/**
-	 * Obtiene la lista de reservas existentes para un hotel específico.
+	 * Obtiene la lista de reservas existentes para un hotel es pecífico.
 	 *
 	 * @param nombrehotel El nombre del hotel para el cual se desea obtener las
 	 *                    reservas.
@@ -77,6 +77,7 @@ public class ReservaServiceImpl implements ReservaService {
 	 * @param preservadas La cantidad de plazas reservadas a ser actualizadas.
 	 */
 	private void actualizarReserva(int idvuelo, int preservadas) {
+		
 		restTemplate.put(url + "vuelos/{idvuelo}/{preservadas}", null, idvuelo, preservadas);
 	}
 
