@@ -2,8 +2,8 @@
 ## Tabla de contenidos
 - [Descripción](#descripción)
 - [Requisitos](#requisitos)
-- [Configuracion de la base de datos](#configuracion)
-- [Ejecucion](#ejecucion)
+- [Configuracion de la base de datos](#configuracion-de-la-base-de-datos)
+- [Ejecucion de la aplicacion](#ejecucion-de-la-aplicacion)
 - [Swagger](#swagger)
 - [Estructura](#estructura)
 
@@ -21,7 +21,7 @@ Antes de ejecutar este proyecto, asegúrate de tener instalado lo siguiente:
 - Spring Data JPA
 - Spring Web
 
-### Configuración de la base de datos
+### Configuracion de la base de datos
 
 Antes de ejecutar la aplicación, debes configurar la conexión a la base de datos en el archivo application.properties ubicado en la carpeta src/main/resources. Asegúrate de proporcionar la URL, el nombre de usuario y la contraseña correctos para tu base de datos.
 
@@ -33,7 +33,7 @@ spring.datasource.password=contraseña
 
 ```
    
-### Ejecucion
+### Ejecucion de la aplicacion
 
 Para ejecutar la terminal sigue estos pasos:
 - Abre un terminal o linea de comandos
